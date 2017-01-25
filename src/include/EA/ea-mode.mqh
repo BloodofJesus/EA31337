@@ -13,10 +13,10 @@
 
 // Other modes.
 //#define __nolicense__    // Disable licensing.
-//#define __backtest__     // For backtest only.
+#define __backtest__     // For backtest only.
 //#define __expire__       // Activates expiration date.
 //#define __limited__      // Define safe options.
-//#define __release__      // Enable release settings.
+#define __release__      // Enable release settings.
 //#define __debug__        // Enable debugging.
 //#define __trace__        // Enable tracing.
 //#define __experimental__ // Enable experimental options.

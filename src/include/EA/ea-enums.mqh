@@ -168,38 +168,40 @@ enum ENUM_STRATEGY_TYPE { // Define type of strategies.
   FINAL_STRATEGY_TYPE_ENTRY // Should be the last one. Used to calculate the number of enum items.
 };
 
+/*
 enum ENUM_INDICATOR_TYPE { // Define type of indicator.
-  AC         =  0,
-  AD         =  1,
-  ADX        =  2,
-  ALLIGATOR  =  3,
-  ATR        =  4,
-  AWESOME    =  5,
-  BANDS      =  6,
-  BPOWER     =  7,
-  BWMFI      =  8,
-  CCI        =  9,
-  DEMARKER   = 10,
-  ENVELOPES  = 11,
-  FORCE      = 12,
-  FRACTALS   = 13,
-  GATOR      = 14,
-  ICHIMOKU   = 15,
-  MA         = 16,
-  MACD       = 17,
-  MFI        = 18,
-  MOMENTUM   = 19,
-  OBV        = 20,
-  OSMA       = 21,
-  RSI        = 22,
-  RVI        = 23,
-  SAR        = 24,
-  STDDEV     = 25,
-  STOCHASTIC = 26,
-  WPR        = 27,
-  ZIGZAG     = 28,
+  S_AC         =  0,
+  S_AD         =  1,
+  S_ADX        =  2,
+  S_ALLIGATOR  =  3,
+  S_ATR        =  4,
+  S_AWESOME    =  5,
+  S_BANDS      =  6,
+  S_BPOWER     =  7,
+  S_BWMFI      =  8,
+  S_CCI        =  9,
+  S_DEMARKER   = 10,
+  S_ENVELOPES  = 11,
+  S_FORCE      = 12,
+  S_FRACTALS   = 13,
+  S_GATOR      = 14,
+  S_ICHIMOKU   = 15,
+  S_MA         = 16,
+  S_MACD       = 17,
+  S_MFI        = 18,
+  S_MOMENTUM   = 19,
+  S_OBV        = 20,
+  S_OSMA       = 21,
+  S_RSI        = 22,
+  S_RVI        = 23,
+  S_SAR        = 24,
+  S_STDDEV     = 25,
+  S_STOCHASTIC = 26,
+  S_WPR        = 27,
+  S_ZIGZAG     = 28,
   FINAL_INDICATOR_TYPE_ENTRY
 };
+*/
 
 enum ENUM_STRATEGY_INFO { // Define type of strategy information entry.
   ACTIVE,
@@ -267,64 +269,6 @@ enum ENUM_ORDER_QUEUE_ENTRY { // Define order queue.
   Q_TIME,       // Time requested to open.
   Q_TOTAL,      // Total number of orders queued.
   FINAL_ORDER_QUEUE_ENTRY // Should be the last one. Used to calculate the number of enum items.
-};
-
-enum ENUM_TRAIL_TYPE { // Define type of trailing types.
-  T_NONE               =   0, // None
-  T1_FIXED             =   1, // Fixed
-  T2_FIXED             =  -1, // Bi-way: Fixed
-  T1_OPEN_PREV         =   2, // Previous open
-  T2_OPEN_PREV         =  -2, // Bi-way: Previous open
-  T1_2_BARS_PEAK       =   3, // 2 bars peak
-  T2_2_BARS_PEAK       =  -3, // Bi-way: 2 bars peak
-  T1_5_BARS_PEAK       =   4, // 5 bars peak
-  T2_5_BARS_PEAK       =  -4, // Bi-way: 5 bars peak
-  T1_10_BARS_PEAK      =   5, // 10 bars peak
-  T2_10_BARS_PEAK      =  -5, // Bi-way: 10 bars peak
-  T1_50_BARS_PEAK      =   6, // 50 bars peak
-  T2_50_BARS_PEAK      =  -6, // Bi-way: 50 bars peak
-  T1_150_BARS_PEAK     =   7, // 150 bars peak
-  T2_150_BARS_PEAK     =  -7, // Bi-way: 150 bars peak
-  T1_HALF_200_BARS     =   8, // 200 bars half price
-  T2_HALF_200_BARS     =  -8, // Bi-way: 200 bars half price
-  T1_HALF_PEAK_OPEN    =   9, // Half price peak
-  T2_HALF_PEAK_OPEN    =  -9, // Bi-way: Half price peak
-  T1_MA_F_PREV         =  10, // MA Fast Prev
-  T2_MA_F_PREV         = -10, // Bi-way: MA Fast Prev
-  T1_MA_F_FAR          =  11, // MA Fast Far
-  T2_MA_F_FAR          = -11, // Bi-way: MA Fast Far
-  T1_MA_F_TRAIL        =  12, // MA Fast+Trail
-  T2_MA_F_TRAIL        = -12, // Bi-way: MA Fast+Trail
-  T1_MA_F_FAR_TRAIL    =  13, // MA Fast Far+Trail
-  T2_MA_F_FAR_TRAIL    = -13, // Bi-way: MA Fast Far+Trail
-  T1_MA_M              =  14, // MA Med
-  T2_MA_M              = -14, // Bi-way: MA Med
-  T1_MA_M_FAR          =  15, // MA Med Far
-  T2_MA_M_FAR          = -15, // Bi-way: MA Med Far
-  T1_MA_M_LOW          =  16, // MA Med Low
-  T2_MA_M_LOW          = -16, // Bi-way: MA Med Low
-  T1_MA_M_TRAIL        =  17, // MA Med+Trail
-  T2_MA_M_TRAIL        = -17, // Bi-way: MA Med+Trail
-  T1_MA_M_FAR_TRAIL    =  18, // MA Med Far+Trail
-  T2_MA_M_FAR_TRAIL    = -18, // Bi-way: MA Med Far+Trail
-  T1_MA_S              =  19, // MA Slow
-  T2_MA_S              = -19, // Bi-way: MA Slow
-  T1_MA_S_FAR          =  20, // MA Slow Far
-  T2_MA_S_FAR          = -20, // Bi-way: MA Slow Far
-  T1_MA_S_TRAIL        =  21, // MA Slow+Trail
-  T2_MA_S_TRAIL        = -21, // Bi-way: MA Slow+Trail
-  T1_MA_FMS_PEAK       =  22, // MA F+M+S Peak
-  T2_MA_FMS_PEAK       = -22, // Bi-way: MA F+M+S Peak
-  T1_SAR               =  23, // SAR
-  T2_SAR               = -23, // Bi-way: SAR
-  T1_SAR_PEAK          =  24, // SAR Peak
-  T2_SAR_PEAK          = -24, // Bi-way: SAR Peak
-  T1_BANDS             =  25, // Bands
-  T2_BANDS             = -25, // Bi-way: Bands
-  T1_BANDS_PEAK        =  26, // Bands Peak
-  T2_BANDS_PEAK        = -26, // Bi-way: Bands Peak
-  T1_ENVELOPES         =  27, // Envelopes
-  T2_ENVELOPES         = -27, // Bi-way: Envelopes
 };
 
 // Define account conditions.
@@ -488,13 +432,6 @@ enum ENUM_STAT_PERIOD_TYPE { // Define type of tasks.
   MONTHLY = 2, // Monthly
   YEARLY  = 3, // Yearly
   FINAL_STAT_PERIOD_TYPE_ENTRY // Should be the last one. Used to calculate the number of enum items.
-};
-
-enum ENUM_INDICATOR_INDEX { // Define indicator constants.
-  CURR = 0,
-  PREV = 1,
-  FAR  = 2,
-  FINAL_INDICATOR_INDEX_ENTRY // Should be the last one. Used to calculate the number of enum items.
 };
 
 // Indicator enumerations.
